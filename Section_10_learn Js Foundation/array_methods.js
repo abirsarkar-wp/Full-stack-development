@@ -66,3 +66,10 @@ let teaMenu = ["Green Tea", "Black Tea", "Oolong", "White Tea", "Herbal"];
 let menuSize = teaMenu.length;
 // print the menuSize
 console.log(menuSize)
+
+
+
+// create an an arraycalled citiBucket, and findout London is present or not and store the result in isLondonPresent
+let cityBucket = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+let isLondonPresent = cityBucket.includes("London");
+console.log(isLondonPresent);
