@@ -1,1 +1,2 @@
-console.log("Hii Abir"); // prints: Hii Abir
+// First JavaScript program: print text to the console.
+console.log("Hii Abir");

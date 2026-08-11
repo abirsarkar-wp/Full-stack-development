@@ -1,31 +1,39 @@
-// Strings, Numbers, Booleans, Null, Undefined, and Symbols are all considered primitive data types in JavaScript.
-let name = "Abir"; // string: stores text data
-console.log(typeof name); // prints: string
+/*
+Primitive data types
+--------------------
+Primitive values are simple values, not objects.
+Common primitive types: string, number, boolean, undefined, null, bigint, symbol.
+*/
 
-let age = 22; // number: stores numeric data
-console.log(typeof age); // prints: number
+let userName = "Abir"; // string: stores text
+console.log(typeof userName); // string
 
-let isDead = false; // boolean: stores true or false
-console.log(typeof isDead); // prints: boolean
+let age = 22; // number: stores integers and decimals
+console.log(typeof age); // number
 
-let x; // undefined: variable is declared but has no value yet
-console.log(typeof x); // prints: undefined                     
-let y = null; // null: intentionally empty value
-console.log(typeof y); // prints: object (this is a known quirk in JavaScript)
+let isStudent = false; // boolean: stores true or false
+console.log(typeof isStudent); // boolean
 
+let notAssignedYet; // undefined: declared, but no value has been assigned
+console.log(typeof notAssignedYet); // undefined
 
+let emptyValue = null; // null: intentionally empty value
+console.log(typeof emptyValue); // object
+// typeof null returning "object" is an old JavaScript quirk.
 
-// string 
-let name = "Abir"
-let greeting = "Hello, " + name + "!"; // concatenation: combines strings
-console.log(greeting); // prints: Hello, Abir!  
+// String concatenation joins strings with +.
+let firstName = "Abir";
+let greeting = "Hello, " + firstName + "!";
+console.log(greeting); // Hello, Abir!
 
-let greeting2 = `Hello, ${name}!`; // template literal: allows embedding expressions, this is called string interpolation
-console.log(greeting2); // prints: Hello, Abir!
-let demoOne = `Value is ${5 + 5}`; // prints: Value is 10
-console.log(demoOne); // prints: Value is 10
+// Template literals use backticks and ${} to insert values.
+let greeting2 = `Hello, ${firstName}!`;
+console.log(greeting2); // Hello, Abir!
 
-//symbol
+let demoOne = `Value is ${5 + 5}`;
+console.log(demoOne); // Value is 10
+
+// Symbol always creates a unique value, even if the description is the same.
 let sym1 = Symbol("unique");
 let sym2 = Symbol("unique");
-console.log(sym1 === sym2); // prints: false, because each symbol is unique
+console.log(sym1 === sym2); // false

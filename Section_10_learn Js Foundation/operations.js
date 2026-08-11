@@ -1,64 +1,76 @@
+/*
+Operator learning patterns
+--------------------------
+Arithmetic operators create numbers.
+Comparison operators create booleans.
+Prefer === and !== in real JavaScript code.
+*/
+
 let score = 105; // create a score value
-console.log(score); // prints: 105
+console.log(score); // 105
 
 let bonus = 20; // create a bonus value
-console.log(bonus); // prints: 20
+console.log(bonus); // 20
 
-let totalScore = score + bonus; // add score and bonus together
-console.log(totalScore); // prints: 125
+let totalScore = score + bonus; // add score and bonus
+console.log(totalScore); // 125
 
-let addition = 10 + 5; // add two numbers
-console.log(addition); // prints: 15
+let addition = 10 + 5;
+console.log(addition); // 15
 
-let subtraction = 10 - 5; // subtract one number from another
-console.log(subtraction); // prints: 5
+let subtraction = 10 - 5;
+console.log(subtraction); // 5
 
-let multiplication = 10 * 5; // multiply numbers
-console.log(multiplication); // prints: 50
+let multiplication = 10 * 5;
+console.log(multiplication); // 50
 
-let division = 10 / 5; // divide numbers
-console.log(division); // prints: 2
+let division = 10 / 5;
+console.log(division); // 2
 
-let remainder = 10 % 3; // get the leftover part after division
-console.log(remainder); // prints: 1
+let remainder = 10 % 3; // modulo: leftover after division
+console.log(remainder); // 1
 
-let exponentiation = 2 ** 3; // raise 2 to the power of 3
-console.log(exponentiation); // prints: 8
+let exponentiation = 2 ** 3; // power: 2 * 2 * 2
+console.log(exponentiation); // 8
 
-let increment = 5; // start with 5
-console.log(increment); // prints: 5
-increment++; // increase by 1
-console.log(increment); // prints: 6
-++increment; // increase by 1 again
-console.log(increment); // prints: 7
+let increment = 5;
+console.log(increment); // 5
 
-let decrement = 5; // start with 5
-console.log(decrement); // prints: 5
-decrement--; // decrease by 1
-console.log(decrement); // prints: 4
---decrement; // decrease by 1 again
-console.log(decrement); // prints: 3
+increment++; // increase by 1 after this statement
+console.log(increment); // 6
 
-let isEqual = 10 == 10; // check if both values are equal
-console.log(isEqual); // prints: true
+++increment; // increase by 1 before this statement finishes
+console.log(increment); // 7
 
-let isNotEqual = 10 != 5; // check if values are not equal
-console.log(isNotEqual); // prints: true
+let decrement = 5;
+console.log(decrement); // 5
 
-let isGreater = 10 > 5; // check if left value is greater
-console.log(isGreater); // prints: true
+decrement--; // decrease by 1 after this statement
+console.log(decrement); // 4
 
-let isLess = 10 < 5; // check if left value is smaller
-console.log(isLess); // prints: false
+--decrement; // decrease by 1 before this statement finishes
+console.log(decrement); // 3
 
-let isGreaterEqual = 10 >= 5; // check if greater or equal
-console.log(isGreaterEqual); // prints: true
+let isEqual = 10 == "10"; // true because == allows type conversion
+console.log(isEqual); // true
 
-let isLessEqual = 10 <= 5; // check if smaller or equal
-console.log(isLessEqual); // prints: false
+let isNotEqual = 10 != 5;
+console.log(isNotEqual); // true
 
-let isStrictEqual = 10 === "10"; // check if same value and same type
-console.log(isStrictEqual); // prints: false
+let isGreater = 10 > 5;
+console.log(isGreater); // true
 
-let isStrictNotEqual = 10 !== "10"; // check if not same value or not same type
-console.log(isStrictNotEqual); // prints: true
+let isLess = 10 < 5;
+console.log(isLess); // false
+
+let isGreaterEqual = 10 >= 5;
+console.log(isGreaterEqual); // true
+
+let isLessEqual = 10 <= 5;
+console.log(isLessEqual); // false
+
+let isStrictEqual = 10 === "10"; // false because number and string are different types
+console.log(isStrictEqual); // false
+
+let isStrictNotEqual = 10 !== "10";
+console.log(isStrictNotEqual); // true

@@ -1,8 +1,18 @@
-let movieName = "Spiderman"; // create a variable and store a movie name
-console.log(movieName); // prints: Spiderman
+/*
+let vs const
+------------
+let creates a variable whose value can change.
+const creates a variable whose value cannot be reassigned.
+*/
 
-movieName = "Batman"; // change the value of movieName to a new movie name
-console.log(movieName); // prints: Batman
+let movieName = "Spiderman";
+console.log(movieName); // Spiderman
 
-const age = 22; // create a constant value that cannot be changed later
-console.log(age); // prints: 22
+movieName = "Batman";
+console.log(movieName); // Batman
+
+const age = 22;
+console.log(age); // 22
+
+// This would cause an error because const cannot be reassigned:
+// age = 23;

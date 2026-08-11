@@ -1,7 +1,13 @@
-console.log("Hello, World!"); // prints: Hello, World!
+/*
+Printing output
+---------------
+Use console methods to see values while learning and debugging.
+*/
 
-process.stdout.write("Hello, World!\n"); // prints: Hello, World! in the terminal
+console.log("Hello, World!"); // normal output
 
-console.table({ name: "John", age: 30, city: "New York" }); // prints a table with the object values
+process.stdout.write("Hello, World!\n"); // terminal output without automatic newline
 
-console.warn("This is a warning message"); // prints: This is a warning message
+console.table({ name: "John", age: 30, city: "New York" }); // table format for objects
+
+console.warn("This is a warning message"); // warning output

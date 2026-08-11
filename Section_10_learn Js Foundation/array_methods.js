@@ -1,75 +1,69 @@
-// Declare an Array which contains tea flavors
+/*
+Array learning patterns
+-----------------------
+Arrays store ordered values.
+Indexes start at 0, so the first item is array[0].
+Some methods change the original array. Examples: push(), pop().
+*/
+
+// 1. Read the first value from an array.
 const teaFlavors = ["Green Tea", "Black Tea", "Oolong", "White Tea", "Herbal"];
-//store the first tea in a variable called "First Tea"
 const firstTea = teaFlavors[0];
-// print the First Tea 
-console.log(firstTea)
+console.log(firstTea); // Green Tea
 
-// create an Array cities 
+// 2. Read the third value from an array.
 let cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
-//store the third city in a variable called "favoriteCity"
 let favoriteCity = cities[2];
-// print the favoriteCity
-console.log(favoriteCity)
+console.log(favoriteCity); // Chicago
 
-
-// create an Array name citiesVisited 
+// 3. Add a new value with push().
 let citiesVisited = ["Paris", "Tokyo", "Sydney", "Rome", "Barcelona"];
-// add Mumbai to it using push method
-let newCity = citiesVisited.push("Mumbai");
-// print thr citiesVisited array
-console.log(citiesVisited)
-console.log(newCity)
+let newLength = citiesVisited.push("Mumbai");
 
+console.log(citiesVisited); // Mumbai is added at the end.
+console.log(newLength); // push() returns the new array length.
 
-
-// ceate an Array teaOrder which contains tea flavors
+// 4. Remove the last value with pop().
 let teaOrder = ["Green Tea", "Black Tea", "Oolong", "White Tea", "Herbal"];
-// remove the last element using the pop method
 let removedTea = teaOrder.pop();
-// print the teaOrder array
-console.log(teaOrder) 
-console.log(removedTea)
 
+console.log(teaOrder); // Herbal is removed.
+console.log(removedTea); // Herbal
 
-// craeat an array calle popularTeas 
+// 5. Reference copy: both variables point to the same array.
 let popularTeas = ["Green Tea", "Black Tea", "Oolong", "White Tea", "Herbal"];
-// create a soft copy of thr popularTeas array using soft copy method name softcopyTeas
-let softcopyTeas = popularTeas;
-// print the softcopyTeas array
-console.log(softcopyTeas)
+let teaReferenceCopy = popularTeas;
+
+console.log(teaReferenceCopy);
 popularTeas.pop();
-console.log(softcopyTeas)
+console.log(teaReferenceCopy); // Also changed, because it is the same array reference.
 
-// create an array called topCities 
+// 6. Shallow copy: create a new array with the same values.
 let topCities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
-// create a hard copy of topCities
-let hardCopyCities = [...topCities]
-// print the hardCopyCities array
-console.log(hardCopyCities)
-topCities.pop();
-console.log(hardCopyCities)
-console.log([...hardCopyCities])
+let copiedCities = [...topCities];
 
-// merge two arrays
+console.log(copiedCities);
+topCities.pop();
+console.log(copiedCities); // Does not change when topCities changes.
+
+// 7. Merge two arrays.
 let array1 = ["a", "b", "c"];
 let array2 = ["d", "e", "f"];
-let mergedArray = [...array1, ...array2];
-let mergedArray2 = array1.concat(array2);
-console.log(mergedArray2)
-console.log(mergedArray)
 
+let mergedArrayWithSpread = [...array1, ...array2];
+let mergedArrayWithConcat = array1.concat(array2);
 
-// create an array name teaMenu
+console.log(mergedArrayWithConcat);
+console.log(mergedArrayWithSpread);
+
+// 8. Find the length of an array.
 let teaMenu = ["Green Tea", "Black Tea", "Oolong", "White Tea", "Herbal"];
-//store the length of teaMenu in a vaiable called menuSize
 let menuSize = teaMenu.length;
-// print the menuSize
-console.log(menuSize)
 
+console.log(menuSize); // 5
 
-
-// create an an arraycalled citiBucket, and findout London is present or not and store the result in isLondonPresent
+// 9. Check if an array contains a value.
 let cityBucket = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
 let isLondonPresent = cityBucket.includes("London");
-console.log(isLondonPresent);
+
+console.log(isLondonPresent); // false

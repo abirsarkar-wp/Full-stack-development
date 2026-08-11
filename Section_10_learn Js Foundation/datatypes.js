@@ -1,28 +1,37 @@
-let name = "Abir"; // string: stores text data
-console.log(name); // prints: Abir
+/*
+JavaScript data type examples
+-----------------------------
+Primitive values: string, number, boolean, bigint, undefined, null, symbol.
+Non-primitive values: array, object, function, date.
+*/
 
-let age = 22; // number: stores numeric data
-console.log(age); // prints: 22
+let userName = "Abir"; // string: text
+console.log(userName);
 
-let isDead = false; // boolean: stores true or false
-console.log(isDead); // prints: false
+let age = 22; // number: integer or decimal
+console.log(age);
 
-let bigNumber = 1234567890123456789012345678901234567890n; // bigint: stores very large integers
-console.log(bigNumber); // prints: 1234567890123456789012345678901234567890
+let isStudent = false; // boolean: true or false
+console.log(isStudent);
 
-let x; // undefined: variable is declared but has no value yet
-console.log(x); // prints: undefined
+let bigNumber = 1234567890123456789012345678901234567890n; // bigint: very large integer
+console.log(bigNumber);
 
-let y = null; // null: intentionally empty value
-console.log(y); // prints: null
+let notAssignedYet; // undefined: declared but not assigned
+console.log(notAssignedYet);
 
-let sym = Symbol("unique"); // symbol: creates a unique value
-console.log(sym); // prints: Symbol(unique)
-let menu = ["Chai", "Coffee", "Cake", "Pastry"]; // array: stores a list of values
-console.log(menu); // prints: [ 'Chai', 'Coffee', 'Cake', 'Pastry' ]
+let emptyValue = null; // null: intentionally empty
+console.log(emptyValue);
 
-let person = { name: "Abir", age: 22, city: "Kolkata" }; // object: stores data in key-value pairs
-console.log(person); // prints: { name: 'Abir', age: 22, city: 'Kolkata' }
+let uniqueId = Symbol("unique"); // symbol: always unique
+console.log(uniqueId);
 
-let age2 = age; // copy the value of age into a new variable
-console.log(age2); // prints: 22
+let menu = ["Chai", "Coffee", "Cake", "Pastry"]; // array: ordered list
+console.log(menu);
+
+let person = { name: "Abir", age: 22, city: "Kolkata" }; // object: key-value pairs
+console.log(person);
+
+// Primitive values copy the actual value.
+let copiedAge = age;
+console.log(copiedAge);
