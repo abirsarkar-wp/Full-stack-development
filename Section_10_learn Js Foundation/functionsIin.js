@@ -55,6 +55,6 @@ function createTeaMaker() {
     };
 }
 
-const teaMaker = createTeaMaker();
-const result = teaMaker("Green Tea");
+const teaMake = createTeaMaker();
+const result = teaMake("Green Tea");
 console.log(result); // Making Green Tea
